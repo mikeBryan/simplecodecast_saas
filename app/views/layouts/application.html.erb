@@ -35,6 +35,13 @@
 
 
   <div class= "container">
+   
+    <!-- wenn eine FlashMessage angezeigt werden soll(flashen soll)/ wie zb. "Message sent.", für jede Nachricht wird das drunter ausgeführt und eingesetzt(value und key)-> wird aus dem contact-controller entnommen. -->
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>    
+      <!-- Die Klasse wurde hier so gewählt, da sie zu den Bootstrapklassen passt bsp: class="alert alert-success". Success wurde im contact-controller als Key festgelegt -->
+    <% end %>
+    
     
     <%= yield %>
 
