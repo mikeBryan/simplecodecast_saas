@@ -11,8 +11,8 @@ class ContactsController < ApplicationController
             name = params[:contact][:name]
             email = params[:contact][:email]
             body = params[:contact][:comments]
-            
             ContactMailer.contact_email(name, email, body).deliver
+            #Klasse.Funktion(Parameter).was_geamcht_werden_soll
             
             flash[:success] = "Message sent."       #in dem fall ist das [:SUCCESS] der key, wird dann in der application.html.erb eingefügt.
             redirect_to new_contact_path
