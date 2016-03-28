@@ -1,13 +1,13 @@
 class Contact < ActiveRecord::Base
-        def name
-
-        end
         
-        def email
+        #Nachricht kann jetzt nur noch gesendet werden, wenn was eingetragen wurde.
         
-        end
+       validates :name, presence:true
+       validates :email, presence:true
+       
         
-        def comments
+       
         
-        end
+         
+        
 end
